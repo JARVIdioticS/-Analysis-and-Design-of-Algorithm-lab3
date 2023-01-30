@@ -10,10 +10,12 @@ public class ADALab3_699 {
         for (int i = 0; i < arr.length; i++) arr[i] = rd.nextInt(100);
         
         while (isSorted(arr) == false) {
-		count++;
-		shuffle(arr);
-	}
-	System.out.println("Count: "+ count);
+    		count++;
+    		System.out.println("Count: " + count);
+    		shuffle(arr);
+    	}
+	System.out.println(Arrays.toString(arr));
+	System.out.println("Finish sorting after shuffled "+ count +" times");
     }
     
     private static boolean isSorted(Integer[]arr)
@@ -25,9 +27,8 @@ public class ADALab3_699 {
 
     private static void shuffle(Integer[]arr)
     {
-	List<Integer> intList = Arrays.asList(arr);
-	Collections.shuffle(intList);
-	intList.toArray(arr);
-	System.out.println(Arrays.toString(arr));
+    	List<Integer> intList = Arrays.asList(arr);
+    	Collections.shuffle(intList);
+    	intList.toArray(arr);
     }
 }
