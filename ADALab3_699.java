@@ -2,12 +2,21 @@
 import java.util.*;
 public class ADALab3_699 {
     public static void main(String args[]) {
-        Integer arr[] = new Integer[100];
+	System.out.println("This is Bogo sorter");
+	
+	Scanner sn = new Scanner(System.in);
+	System.out.print("please enter number of array indexes you want: ");
+	int index = sn.nextInt();
+	System.out.print("please enter number of input limit you want: ");
+	int limit = sn.nextInt();
+	sn.close();
+	    
+        Integer arr[] = new Integer[index];
         Random rd = new Random();
 
         //fill inputs
         int count = 0;
-        for (int i = 0; i < arr.length; i++) arr[i] = rd.nextInt(100);
+        for (int i = 0; i < arr.length; i++) arr[i] = rd.nextInt(limit);
         
         while (isSorted(arr) == false) {
     		count++;
