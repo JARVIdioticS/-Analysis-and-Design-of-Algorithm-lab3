@@ -12,12 +12,9 @@ public class ADALab3_699 {
 	sn.close();
 	    
         Integer arr[] = new Integer[index];
-        Random rd = new Random();
-
-        //fill inputs
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) arr[i] = rd.nextInt(limit);
+        fill(arr, limit);
         
+	    int count = 0;
         while (isSorted(arr) == false) {
     		count++;
     		System.out.println("Count: " + count);
@@ -26,6 +23,12 @@ public class ADALab3_699 {
 	System.out.println(Arrays.toString(arr));
 	System.out.println("Finish sorting after shuffled "+ count +" times");
     }
+	
+	private static void fill(Integer[]arr, int limit)
+	{
+		Random rd = new Random();
+		for (int i = 0; i < arr.length; i++) arr[i] = rd.nextInt(limit);
+	}
     
     private static boolean isSorted(Integer[]arr)
     {
